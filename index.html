@@ -1,1 +1,42 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lily's Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- Shared navigation loaded from navigation.html -->
+    <div id="nav-placeholder"></div>
+    <h1>Lily's Portfolio</h1>
+    <!-- Bootstrap JavaScript -->
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Load shared navigation -->
+    <script>
+        fetch('navigation.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('nav-placeholder').innerHTML = html;
+            });
+    </script>
+    <div class="clearfix">
+  <img src="images/loki-piano.jpg" class="col-md-6 float-md-end mb-3 ms-md-3" alt="African grey parrot standing on piano" style="max-width: 100%; height: auto;">
+  <p>Hello, I am Lily and I am studying cybersecurity. Areas that interest me in STEM are machine learning and data privacy. Skills I am currently developing are: creating websites with HTML and Bootstrap. I hope to learn how to code fluently in Python in the future.</p>
+<h3>My current skills:</h3>
+  <ul>
+  <li>HTML</li>
+  <li>Bootstrap</li>
+  <li>Website creation</li>
+</ul>
+<h3>Skills I wish to learn:</h3>
+  <ul>
+  <li>Python</li>
+  <li>Machine learning</li>
+  <li>Data privacy</li>
+</ul>
+</div>
+<!-- Added ordered lists, images, and Bootstrap containers -->
+</body>
+</html>

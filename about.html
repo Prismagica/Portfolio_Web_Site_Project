@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lily's About Me</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+</head>
+<body>  
+    <!-- Shared navigation loaded from navigation.html -->
+    <div id="nav-placeholder"></div>
+
+    <h1>Lily's About Me</h1>
+    <p>Some more about me is that I am passionate about 3D printing and design. These are some of my favorite 3d printing sites!</p>
+<div class="grid text-center">
+  <div class="g-col-6 g-col-md-4">.<a href="https://bambulab.com/en-us/">Bambu Lab</a></div>
+  <div class="g-col-6 g-col-md-4">.<a href="https://vzbot.org/">VzBot</a></div>
+  <div class="g-col-6 g-col-md-4">.<a href="https://www.prusa3d.com/">Prusa</a></div>
+</div>
+<div class="grid text-center">
+  <div class="g-col-6 g-col-md-4">.<a href="https://www.thingiverse.com/">Thingiverse</a></div>
+  <div class="g-col-6 g-col-md-4">.<a href="https://www.cults3d.com/en/">Cults3D</a></div>
+  <div class="g-col-6 g-col-md-4">.<a href="https://www.myminifactory.com/">MyMiniFactory</a></div>
+</div>
+    <!-- Bootstrap JavaScript -->
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Load shared navigation -->
+    <script>
+        fetch('navigation.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('nav-placeholder').innerHTML = html;
+            });
+    </script>
+</body>
+</html>
